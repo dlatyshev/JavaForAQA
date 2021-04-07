@@ -64,13 +64,11 @@ public class Main {
 
 }
 
-6. Write a program that will enter numbers from the keyboard.
+6. Write a program that will read numbers from the keyboard.
 The code for reading numbers from the keyboard must be in the readData method.
 The code inside the readData is wrapped in a try..catch.
-
-If the user entered some text, instead of entering a number, the method should catch the exception and display all
-previously entered numbers as a result.
-Numbers output from a new line preserving the order of input.
+If the user entered some text, instead of a number, this method should catch the exception and display all
+previously entered numbers as a result. Each number should be printed from a new line preserving the order of the input.
 
 7. In the Example class, implement a couple of equals / hashCode methods in accordance with the rules for implementing
 these methods (check details with your favorite search engine).
