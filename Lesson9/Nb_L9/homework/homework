@@ -1,0 +1,2 @@
+1. Read about java.nio package(Path, Paths, Files, File) and try to use it to read the data from the first file
+and write this data to the second file. Delete the initial file from the disk.
