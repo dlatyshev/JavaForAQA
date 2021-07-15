@@ -1,0 +1,4 @@
+@Stream
+public class Printer {
+
+}

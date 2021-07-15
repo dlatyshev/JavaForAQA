@@ -1,5 +1,7 @@
 package org.dmytroqa.javatutorials;
 
+import java.util.Random;
+
 public class StringEncoder {
 
     public static void main(String[] args) {
@@ -10,8 +12,8 @@ public class StringEncoder {
             textToEncode = args[0];
             shift = Integer.parseInt(args[1]);
         } else {
-            textToEncode = "Any string for example";
-            shift = 3;
+            textToEncode = "This is a very secret message. We should encode it";
+            shift = 25;
         }
 
         String encodedString = encode(textToEncode, shift);

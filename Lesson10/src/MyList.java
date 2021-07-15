@@ -3,21 +3,7 @@ import java.util.*;
 public class MyList<T> extends AbstractList<T> {
 
     private T[] innerArray;
-    private int size;
-
-    @Override
-    public T get(int index) {
-        if (index > innerArray.length - 1) {
-            throw new IndexOutOfBoundsException(index);
-        }
-
-        return innerArray[index];
-    }
-
-    @Override
-    public int size() {
-        return size;
-    }
+    private int pointer;
 
     public MyList() {
         innerArray = (T[])(new Object[10]);
@@ -28,12 +14,43 @@ public class MyList<T> extends AbstractList<T> {
     }
 
     @Override
-    public boolean add(T t) {
-        return super.add(t);
+    public T get(int index) {
+        if (index > innerArray.length - 1 || index < 0) {
+            throw new IndexOutOfBoundsException(index);
+        }
+
+        return innerArray[index];
+    }
+
+    @Override
+    public int size() {
+        return innerArray.length;
+    }
+
+    @Override
+    public boolean add(T element) {
+        if (element == null) {
+            throw new NullPointerException("Value cannot be null");
+        }
+
+        if (pointer == innerArray.length) {
+            innerArray = Arrays.copyOf(innerArray, innerArray.length * 2);
+        }
+        innerArray[pointer] = element;
+        pointer++;
+
+        return true;
     }
 
     @Override
     public T set(int index, T element) {
+        if (element == null) {
+            throw new NullPointerException("Value cannot be null");
+        }
+        if (index > innerArray.length - 1 || index < 0) {
+            throw new IndexOutOfBoundsException(index);
+        }
+
         innerArray[index] = element;
         return element;
     }
@@ -102,4 +119,6 @@ public class MyList<T> extends AbstractList<T> {
     public void removeRange(int fromIndex, int toIndex) {
         super.removeRange(fromIndex, toIndex);
     }
+
+
 }

@@ -50,15 +50,15 @@ public class Main {
     // write your code here
     }
 
-    private static ArrayList<Character> transformIntToChar(int... values) {
-        ArrayList<Character> buffer = new ArrayList<>();
+    private static mypackage.one.ArrayList<Character> transformIntToChar(int... values) {
+        mypackage.one.ArrayList<Character> buffer = new mypackage.one.ArrayList<>();
         for (int i: values) {
             buffer.add(((char) i));
         }
         return buffer;
     }
 
-    private static void printList(ArrayList<Character> characters) {
+    private static void printList(mypackage.one.ArrayList<Character> characters) {
         for (char c: characters) {
             System.out.print(c);
         }
